@@ -17,7 +17,7 @@ const useWeather = () => {
 
     try {
       const response = await fetch(
-        `${weatherApiUrl}/${encodeURIComponent(city.trim())}`
+        `${weatherApiUrl}?city=${encodeURIComponent(city.trim())}`
       );
 
       if (!response.ok) {

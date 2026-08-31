@@ -8,8 +8,8 @@ const app = express();
 
 const apiKey = process.env.WEATHER_API_KEY;
 
-app.get('/api/search/:city', async (req, res) => {
-  const cityName = req.params.city;
+app.get('/api/search', async (req, res) => {
+  const cityName = req.query.city;
 
   try {
     const response = await axios.get(
